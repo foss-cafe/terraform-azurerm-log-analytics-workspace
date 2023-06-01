@@ -70,7 +70,7 @@ variable "internet_query_enabled" {
 variable "reservation_capacity_in_gb_per_day" {
   type        = number
   description = "(Optional) The capacity reservation level in GB for this workspace. Must be in increments of 100 between 100 and 5000."
-  default     = 100
+  default     = null
 }
 
 variable "tags" {
