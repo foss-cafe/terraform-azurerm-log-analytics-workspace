@@ -78,3 +78,21 @@ variable "tags" {
   description = "(Optional) A mapping of tags to assign to the resource."
   default     = {}
 }
+
+variable "solution_name" {
+  type        = string
+  description = "(Optional) Specifies the name of the solution to be deployed. See here for options.Changing this forces a new resource to be created."
+  default     = "ContainerInsights"
+}
+
+variable "plan" {
+  type        = any
+  description = "(Optional) A plan block"
+  default = [
+    {
+      publisher = "Microsoft"
+      product   = "OMSGallery/ContainerInsights"
+    }
+  ]
+}
+
